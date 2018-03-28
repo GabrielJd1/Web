@@ -1,0 +1,57 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Meu Aplicativo ASP.NET</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+<div class="container body-content">
+    <form class="form-signin formLogin" action="~/Login/Autentica" method="post">
+        <div class="text-center mb-4 logoLogin">
+            <img class="mb-4" src="~/Content/Imagens/imgLogo.png" alt="LogoJD">
+        </div>
+
+        <div class="form-label-group">
+            <input type="text" id="inputNick" class="form-control" name="Nick" placeholder="Nome Usuário" required autofocus>
+            @*<label for="inputNick">Nome Usuario</label>*@
+        </div>
+
+        <div class="form-label-group">
+            <input type="password" id="inputPassword" class="form-control" name="Senha" placeholder="Password" required>
+            @*<label for="inputPassword">Password</label>*@
+
+
+        </div>
+
+        @{
+        if (IsPost)
+        {
+            if (ViewBag.ErroAutenticacao != String.Empty)
+            {
+        <p class="text-danger">@ViewBag.ErroAutenticacao</p> 
+        }
+    }
+        }
+
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
+
+
+        <p class="mt-5 mb-3 text-muted text-center">&copy; @DateTime.Now.Year</p>
+    </form>
+</div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    
+</body>
+</html>
