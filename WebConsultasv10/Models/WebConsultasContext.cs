@@ -15,7 +15,7 @@ namespace WebConsultasv10.Models
         }
         public DbSet<Funcionarios> Funcionarios { get; set; }
         public DbSet<Usuarios> Usuarios { get; set; }
-
+        public DbSet<Empresas> Empresas { get; set; }
 
     }
 }

@@ -13,12 +13,14 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
-<body>
+<body class="body-login">
 <div class="container body-content">
     <form class="form-signin formLogin" action="~/Login/Autentica" method="post">
         <div class="text-center mb-4 logoLogin">
             <img class="mb-4" src="~/Content/Imagens/imgLogo.png" alt="LogoJD">
         </div>
+
+      
 
         <div class="form-label-group">
             <input type="text" id="inputNick" class="form-control" name="Nick" placeholder="Nome Usuário" required autofocus>
@@ -33,20 +35,23 @@
         </div>
 
         @{
-        if (IsPost)
-        {
-            if (ViewBag.ErroAutenticacao != String.Empty)
+            if (IsPost)
             {
-        <p class="text-danger">@ViewBag.ErroAutenticacao</p> 
+                if (ViewBag.ErroAutenticacao != String.Empty)
+                {
+            <p class="text-danger">@ViewBag.ErroAutenticacao</p>
+            }
         }
-    }
-        }
+            }
 
 
         <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
 
 
+
         <p class="mt-5 mb-3 text-muted text-center">&copy; @DateTime.Now.Year</p>
+
+
     </form>
 </div>
 

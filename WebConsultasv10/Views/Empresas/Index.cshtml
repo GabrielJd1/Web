@@ -1,0 +1,53 @@
+﻿@model IEnumerable<WebConsultasv10.Models.Empresas>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Cnpj)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NomeFan)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NomeRazao)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cnpj)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeFan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeRazao)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.IdEmpresa }) |
+                @Html.ActionLink("Details", "Details", new { id=item.IdEmpresa }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.IdEmpresa })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

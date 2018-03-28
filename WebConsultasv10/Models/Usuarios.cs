@@ -20,5 +20,12 @@ namespace WebConsultasv10.Models
         public int IdFuncionario { get; set; }
 
         public virtual Funcionarios Funcionarios { get; set; }
+
+        [ForeignKey("Empresas")]
+        public int IdEmpresa { get; set; }
+
+        public virtual Empresas Empresas { get; set; }
+
+
     }
 }

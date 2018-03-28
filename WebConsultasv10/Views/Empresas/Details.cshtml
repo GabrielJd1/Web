@@ -1,0 +1,50 @@
+﻿@model WebConsultasv10.Models.Empresas
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>Empresas</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Cnpj)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Cnpj)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.NomeFan)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.NomeFan)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.NomeRazao)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.NomeRazao)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.IdEmpresa }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

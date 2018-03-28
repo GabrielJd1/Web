@@ -148,6 +148,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\EmpresasController.cs" />
     <Compile Include="Controllers\FuncionariosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -164,7 +165,16 @@
     <Compile Include="Migrations\201803262031035_Second.Designer.cs">
       <DependentUpon>201803262031035_Second.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803282015545_Teste.cs" />
+    <Compile Include="Migrations\201803282015545_Teste.Designer.cs">
+      <DependentUpon>201803282015545_Teste.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803282023329_Empresas.cs" />
+    <Compile Include="Migrations\201803282023329_Empresas.Designer.cs">
+      <DependentUpon>201803282023329_Empresas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Empresas.cs" />
     <Compile Include="Models\Funcionarios.cs" />
     <Compile Include="Models\Usuarios.cs" />
     <Compile Include="Models\WebConsultasContext.cs" />
@@ -218,6 +228,11 @@
     <Content Include="Views\Usuarios\Edit.cshtml" />
     <Content Include="Views\Usuarios\Index.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Empresas\Create.cshtml" />
+    <Content Include="Views\Empresas\Delete.cshtml" />
+    <Content Include="Views\Empresas\Details.cshtml" />
+    <Content Include="Views\Empresas\Edit.cshtml" />
+    <Content Include="Views\Empresas\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -244,6 +259,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803262031035_Second.resx">
       <DependentUpon>201803262031035_Second.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803282015545_Teste.resx">
+      <DependentUpon>201803282015545_Teste.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803282023329_Empresas.resx">
+      <DependentUpon>201803282023329_Empresas.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
